@@ -1,0 +1,14 @@
+:root {
+  --blue-1: rgb(0, 183, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
