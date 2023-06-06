@@ -1,5 +1,5 @@
 :root {
-  --blue-1: rgb(0, 140, 255);
+  --blue-1: rgb(0, 110, 255);
   --white-1: rgb(255, 250, 231);
   --gray-1: rgb(219, 227, 228);
 }
@@ -18,7 +18,6 @@ a {
 img {
   height: 24px;
   width: 24px;
-  filter: invert();
 }
 
 body {
@@ -53,6 +52,7 @@ body {
 }
 
 .sidebar-section>img {
+  filter: invert();
   justify-self: center;
 }
 
@@ -61,6 +61,7 @@ body {
   width: 50px;
 }
 
+/* Left half of screen on desktop */
 .main-content-container {
   /* background-color: rgb(255, 136, 0); */
   /* padding: 8px; */
@@ -70,6 +71,10 @@ body {
 
 .header-container {
   background-color: var(--white-1);
+  min-height: 15vh;
+  padding: 16px;
+  display: grid;
+  grid-template-rows: auto auto;
 }
 
 .user-content-container {
