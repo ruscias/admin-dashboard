@@ -2,6 +2,7 @@
   --blue-1: rgb(0, 110, 255);
   --white-1: rgb(255, 253, 244);
   --gray-1: rgb(219, 227, 228);
+  --gray-2: rgb(119, 127, 129);
   --shadow: rgb(152, 152, 152);
 }
 
@@ -145,6 +146,128 @@ body {
   background-color: var(--blue-1);
 }
 
+/* section with projects, announcements, and trending */
 .user-content-container {
   background-color: var(--gray-1);
+  padding: 40px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 2.2fr 1fr;
+}
+
+.user-content-container>div.projects-container {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.user-content-container>div.user-activity-container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.user-content-container>div.user-activity-container>div {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.user-content-container>div>div.projects-cards-container {
+  align-self: start;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* for user-content area headers */
+.user-content-container>div>span,
+.user-content-container>div>div>span {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.user-content-container>div>div.projects-cards-container>div.project-card {
+  background-color: var(--white-1);
+  padding: 24px;
+  min-height: 168px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: auto repeat(2, 1fr);
+  font-size: .9rem;
+  color: var(--gray-2);
+  border-left: 8px solid rgb(255, 183, 0);
+  filter: drop-shadow(1px 4px 3px var(--shadow));
+}
+
+.user-content-container>div>div.projects-cards-container>div.project-card>span:nth-child(1) {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.user-content-container>div>div>div.project-card>div.project-card-buttons {
+  justify-self: end;
+  align-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+}
+
+
+
+.user-content-container>div.user-activity-container>div>div {
+  /* already a grid from above */
+  background-color: var(--white-1);
+  border-radius: 8px;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  filter: drop-shadow(2px 4px 2px var(--shadow));
+}
+
+.user-content-container>div>div>div>.announcement.item {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-1);
+  gap: 8px;
+  font-size: .8rem;
+  color: var(--gray-2);
+}
+
+.user-content-container>div>div>div>.announcement.item:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+.user-content-container>div>div>div>.announcement.item>span.announcement-header {
+  font-weight: 700;
+  font-size: 1rem;
+  color: black;
+}
+
+.user-content-container>div>div.trending-container {
+  align-self: end;
+}
+
+.user-content-container>div>div>div>.trending.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-content-container>div>div>div>.trending.item>div {
+  display: grid;
+  color: var(--gray-2);
+}
+
+.user-content-container>div>div>div>.trending.item>div>span.trending-user-handle {
+  font-weight: 700;
+  color: black;
+}
+
+.user-content-container>div>div>div>.trending.item>img {
+  height: 40px;
+  width: 40px;
 }
